@@ -13,14 +13,14 @@
             <li class="header__menu-item">О нас</li>
             <li class="header__menu-item">Контакты</li>
         </ul>
-
-        <button class="header__btn">Подключиться</button>
+        <Button label="Подключиться" />
     </header>
 </template>
 
 <style lang="scss">
 .header {
     position: fixed;
+    z-index: 3;
     display: flex;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.6);
@@ -56,28 +56,6 @@
                 border-radius: 15px;
                 cursor: pointer;
             }
-        }
-    }
-    &__btn {
-        background-color: $green;
-        border-radius: 50px;
-        font-weight: 600;
-        margin: 0.6rem 0.6rem;
-        padding: 20px;
-        white-space: normal;
-        transition: all 0.2s ease-in-out;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        word-break: break-word;
-        color: $white;
-        font-size: 16px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        &:hover {
-            opacity: .6;
-            cursor: pointer;
         }
     }
 }
