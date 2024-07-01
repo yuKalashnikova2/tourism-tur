@@ -21,10 +21,14 @@
     </div>
 
 
-    <section class="section container">
+    <section class="section_one container">
         <Subtitle subtitle="Планы Лечения" />
         <CardPriceWrapper />
    
+    </section>
+    <section class="section_two container">
+        <Subtitle subtitle="Последние новости" />
+        <CardLastNewsWrapper />
     </section>
 </template>
 
@@ -51,6 +55,10 @@
     width: 100%;
     height: auto;
     object-fit: cover;
+}
+.container {
+    padding-top: 5rem;
+    padding-bottom: 4rem;
 }
 
 .text-overlay {
@@ -82,9 +90,8 @@
 .button_width {
     max-width: 232px;
 }
-.section {
+.section_one {
     background-color: $background-green;
-    padding-top: 5rem;
-    padding-bottom: 4rem;
+   
 }
 </style>
