@@ -44,6 +44,14 @@
         <Subtitle subtitle="Наша команда" />
         <CardTeamWrapper />
     </section>
+    <section>
+        <marquee scrollamount="12" loop="-1" scrolldelay="1" class="scrolling-text">Бесплатная консультация * Бронирование и проживание * Отпуск и анализы * Операция и процедуры * Сопровождение и гарантия * Фото до и после * </marquee>
+    </section>
+
+    <section class="section_seven container">
+        <Subtitle subtitle="Наши партнеры" />
+        <CardPartnersWrapper />
+    </section>
 </template>
 
 <style lang="scss" scoped>
@@ -133,5 +141,11 @@
     margin-right: 100px;
     margin-left: 100px;
 }
-
+.scrolling-text {
+    font-size: calc( 2.4rem + (5 - 2.4) * ((100vw - 62rem) / (87 - 62)));
+    line-height: 1.3;
+    text-align: center;
+    white-space: nowrap;
+    font-weight: bold;
+}
 </style>
