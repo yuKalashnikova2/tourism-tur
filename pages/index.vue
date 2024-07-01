@@ -30,7 +30,19 @@
     </section>
     <section class="section_three container">
         <Subtitle subtitle="Медицинский туризм: Россия - Турция" />
-        <VideoComponent />
+        <VideoComponent class="container-100" />
+    </section>
+    <section class="section_four container">
+        <div class="section_four_styles container-100">
+            <Subtitle subtitle="Откройте новый мир здоровья!" />
+            <span>Путешествие в Турцию для операций и процедур станет вашим лучшим решением. Доверьте свое здоровье профессионалам и наслаждайтесь результатом!</span>
+            <Button label="Узнать больше" />
+        </div>
+    
+    </section>
+    <section class="section_five container">
+        <Subtitle subtitle="Наша команда" />
+        <CardTeamWrapper />
     </section>
 </template>
 
@@ -95,8 +107,31 @@
 .section_one {
     background-color: $background-green;
 }
+.section_four {
+    background-color: $background-green;
+    text-align: center;
+    &_styles {
+        background-color: $yellow;
+        border-radius: 30px;
+        padding: 64px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-left:16px ;
+        margin-right: 16px;
+        & span {
+            font-size: 1.4rem;
+            line-height: 1.3;
+            display: inline-block;
+        }
+    }
+}
 .mb-48 {
     margin-bottom: 3rem !important;
+}
+.container-100 {
+    margin-right: 100px;
+    margin-left: 100px;
 }
 
 </style>
