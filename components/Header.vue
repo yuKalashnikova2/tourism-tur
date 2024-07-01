@@ -1,5 +1,5 @@
 <template>
-    <header class="header">
+    <header class="header header_container">
         <div class="header__logo">
             <div class="header__image">
                 <img src="/logo.jpeg" alt="logo" />
@@ -28,6 +28,11 @@
     padding: 10px;
     width: 100%;
     border-radius: 50px;
+    &_container {
+        top: 16px;
+   
+        // margin: 16px 99px 0 99px;
+    }
     & h2 {
         font-size: 20px;
     }

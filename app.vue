@@ -1,5 +1,3 @@
-
-import { AppComp } from '#build/components';
 <template>
 
     <Header />
@@ -7,7 +5,3 @@ import { AppComp } from '#build/components';
 
 
 </template>
-<style lang="scss">
-
-// @use "~/assets/main.scss";
-</style>

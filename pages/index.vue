@@ -19,6 +19,13 @@
             </div>
         </div>
     </div>
+
+
+    <section class="section container">
+        <Subtitle subtitle="Планы Лечения" />
+        <CardPriceWrapper />
+   
+    </section>
 </template>
 
 <style lang="scss" scoped>
@@ -74,5 +81,10 @@
 }
 .button_width {
     max-width: 232px;
+}
+.section {
+    background-color: $background-green;
+    padding-top: 5rem;
+    padding-bottom: 4rem;
 }
 </style>

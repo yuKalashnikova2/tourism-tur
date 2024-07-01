@@ -19,16 +19,14 @@ const props = defineProps({
         background-color: $green;
         border-radius: 50px;
         font-weight: 600;
-        margin: 0.6rem 0.6rem;
         padding: 20px;
-        white-space: normal;
         transition: all 0.2s ease-in-out;
-        display: inline-flex;
+        display: flex;
         align-items: center;
         justify-content: center;
-        word-break: break-word;
         color: $white;
-        font-size: 16px;
+        font-size: 1.4rem;
+        
         display: flex;
         align-items: center;
         justify-content: center;
