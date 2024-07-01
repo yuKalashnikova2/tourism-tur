@@ -20,15 +20,17 @@
         </div>
     </div>
 
-
     <section class="section_one container">
         <Subtitle subtitle="Планы Лечения" />
         <CardPriceWrapper />
-   
     </section>
     <section class="section_two container">
         <Subtitle subtitle="Последние новости" />
         <CardLastNewsWrapper />
+    </section>
+    <section class="section_three container">
+        <Subtitle subtitle="Медицинский туризм: Россия - Турция" />
+        <VideoComponent />
     </section>
 </template>
 
@@ -92,6 +94,9 @@
 }
 .section_one {
     background-color: $background-green;
-   
 }
+.mb-48 {
+    margin-bottom: 3rem !important;
+}
+
 </style>
