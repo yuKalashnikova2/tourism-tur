@@ -79,6 +79,9 @@
         </div>
         <CardCitiesWrapper />
     </section>
+    <section class="section_eleven container container-100">
+        <AdvantagesWrapper />
+    </section>
 </template>
 
 <style lang="scss" scoped>
