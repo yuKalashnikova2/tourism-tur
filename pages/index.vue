@@ -88,6 +88,10 @@
             <QuestionsWrapper />
         </div>
     </section>
+    <section class="section_thirteen container">
+        <Subtitle subtitle="Подписывайтесь на нас" />
+        <SocialWrapper />
+    </section>
 </template>
 
 <style lang="scss" scoped>
@@ -200,6 +204,9 @@
     }
     &_twelve {
         background-color: $background-green;
+    }
+    &_thirteen {
+        background-color: $white;
     }
 }
 .mb-48 {
