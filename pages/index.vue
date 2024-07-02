@@ -35,22 +35,37 @@
     <section class="section_four container">
         <div class="section_four_styles container-100">
             <Subtitle subtitle="Откройте новый мир здоровья!" />
-            <span>Путешествие в Турцию для операций и процедур станет вашим лучшим решением. Доверьте свое здоровье профессионалам и наслаждайтесь результатом!</span>
+            <span
+                >Путешествие в Турцию для операций и процедур станет вашим
+                лучшим решением. Доверьте свое здоровье профессионалам и
+                наслаждайтесь результатом!</span
+            >
             <Button label="Узнать больше" />
         </div>
-    
     </section>
     <section class="section_five container">
         <Subtitle subtitle="Наша команда" />
         <CardTeamWrapper />
     </section>
     <section>
-        <marquee scrollamount="12" loop="-1" scrolldelay="1" class="scrolling-text">Бесплатная консультация * Бронирование и проживание * Отпуск и анализы * Операция и процедуры * Сопровождение и гарантия * Фото до и после * </marquee>
+        <marquee
+            scrollamount="12"
+            loop="-1"
+            scrolldelay="1"
+            class="scrolling-text"
+            >Бесплатная консультация * Бронирование и проживание * Отпуск и
+            анализы * Операция и процедуры * Сопровождение и гарантия * Фото до
+            и после *
+        </marquee>
     </section>
 
     <section class="section_seven container">
         <Subtitle subtitle="Наши партнеры" />
         <CardPartnersWrapper />
+    </section>
+
+    <section class="section_eight">
+        <div class="section_eight__banner"></div>
     </section>
 </template>
 
@@ -112,29 +127,42 @@
 .button_width {
     max-width: 232px;
 }
-.section_one {
-    background-color: $background-green;
-}
-.section_four {
-    background-color: $background-green;
-    text-align: center;
-    &_styles {
-        background-color: $yellow;
-        border-radius: 30px;
-        padding: 64px;
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-        margin-left:16px ;
-        margin-right: 16px;
-        & span {
-            font-size: 1.4rem;
-            line-height: 1.3;
-            display: inline-block;
+
+.section {
+    &_one {
+        background-color: $background-green;
+    }
+    &_four {
+        background-color: $background-green;
+        text-align: center;
+        &_styles {
+            background-color: $yellow;
+            border-radius: 30px;
+            padding: 64px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-left: 16px;
+            margin-right: 16px;
+            & span {
+                font-size: 1.4rem;
+                line-height: 1.3;
+                display: inline-block;
+            }
+        }
+    }
+    &_eight {
+        &__banner {
+            background-image: url('/banner-2.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 1000px;
         }
     }
 }
-.mb-48 {
+.se.mb-48 {
     margin-bottom: 3rem !important;
 }
 .container-100 {
@@ -142,7 +170,7 @@
     margin-left: 100px;
 }
 .scrolling-text {
-    font-size: calc( 2.4rem + (5 - 2.4) * ((100vw - 62rem) / (87 - 62)));
+    font-size: calc(2.4rem + (5 - 2.4) * ((100vw - 62rem) / (87 - 62)));
     line-height: 1.3;
     text-align: center;
     white-space: nowrap;
