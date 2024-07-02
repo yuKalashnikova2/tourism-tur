@@ -92,6 +92,10 @@
         <Subtitle subtitle="Подписывайтесь на нас" />
         <SocialWrapper />
     </section>
+    <section class="section_fourteen container">
+        <Subtitle subtitle="Наши контакты" />
+        <ContactsWrapper />
+    </section>
 </template>
 
 <style lang="scss" scoped>
@@ -207,6 +211,9 @@
     }
     &_thirteen {
         background-color: $white;
+    }
+    &_fourteen {
+        background-color: $background-green;
     }
 }
 .mb-48 {
