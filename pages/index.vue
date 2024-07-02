@@ -33,7 +33,7 @@
         <VideoComponent class="container-100" />
     </section>
     <section class="section_four container">
-        <div class="section_four_styles container-100">
+        <div class="section_four_styles container">
             <Subtitle subtitle="Откройте новый мир здоровья!" />
             <span
                 >Путешествие в Турцию для операций и процедур станет вашим
@@ -69,6 +69,15 @@
     </section>
     <section class="section_nine container">
         <BestConsult name="Эйюп Ахмет Уйгун" avatar="photo-1.jpg" />
+    </section>
+    <section class="section_ten container">
+        <div class="container-100 width-800">
+            <Subtitle subtitle="Идеальные курортные города" />
+            <h5 class="section_ten__cities__title">
+                Отправляйтесь в Турцию для незабываемого отдыха и лечения
+            </h5>
+        </div>
+        <CardCitiesWrapper />
     </section>
 </template>
 
@@ -164,6 +173,22 @@
             height: 1000px;
         }
     }
+    &_ten {
+        background-color: $background-green;
+        &__cities__title {
+            margin-top: 2rem !important;
+            text-align: center;
+            word-break: break-word;
+            word-wrap: break-word;
+            font-weight: 400;
+            font-size: calc(
+                1.14rem + (1.4 - 1.14) * ((100vw - 62rem) / (87 - 62))
+            );
+            line-height: calc(
+                1.4 * (1.14rem + (1.4 - 1.14) * ((100vw - 62rem) / (87 - 62)))
+            );
+        }
+    }
 }
 .se.mb-48 {
     margin-bottom: 3rem !important;
@@ -178,5 +203,9 @@
     text-align: center;
     white-space: nowrap;
     font-weight: bold;
+}
+.width-800 {
+    max-width: 800px;
+    margin: 0 auto;
 }
 </style>
