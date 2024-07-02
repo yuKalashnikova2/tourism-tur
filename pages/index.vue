@@ -33,7 +33,7 @@
         <VideoComponent class="container-100" />
     </section>
     <section class="section_four container">
-        <div class="section_four_styles container">
+        <div class="section_four_styles container-100">
             <Subtitle subtitle="Откройте новый мир здоровья!" />
             <span
                 >Путешествие в Турцию для операций и процедур станет вашим
@@ -81,6 +81,12 @@
     </section>
     <section class="section_eleven container container-100">
         <AdvantagesWrapper />
+    </section>
+    <section class="section_twelve container">
+        <Subtitle subtitle="Ответы на вопросы" />
+        <div class="container-100">
+            <QuestionsWrapper />
+        </div>
     </section>
 </template>
 
@@ -192,8 +198,11 @@
             );
         }
     }
+    &_twelve {
+        background-color: $background-green;
+    }
 }
-.se.mb-48 {
+.mb-48 {
     margin-bottom: 3rem !important;
 }
 .container-100 {
