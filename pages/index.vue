@@ -67,6 +67,9 @@
     <section class="section_eight">
         <div class="section_eight__banner"></div>
     </section>
+    <section class="section_nine container">
+        <BestConsult name="Эйюп Ахмет Уйгун" avatar="photo-1.jpg" />
+    </section>
 </template>
 
 <style lang="scss" scoped>
