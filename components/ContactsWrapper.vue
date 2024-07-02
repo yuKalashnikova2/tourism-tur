@@ -1,5 +1,5 @@
 <template>
-    <div class="contacts__wrapper">
+    <div class="contacts__wrapper" id="contacts">
         <ContactCard title="Телефон" descry="+7 925 499 45 61" />
         <ContactCard title="Email" descry="eyupahmetuygun@mail.ru" />
         <ContactCard title="Адрес" descry="Москва, Улица А, дом 3, Россия" />

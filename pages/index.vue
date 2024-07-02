@@ -96,6 +96,9 @@
         <Subtitle subtitle="Наши контакты" />
         <ContactsWrapper />
     </section>
+    <section class="section_fifteen container">
+        <Footer />
+    </section>
 </template>
 
 <style lang="scss" scoped>
@@ -214,6 +217,9 @@
     }
     &_fourteen {
         background-color: $background-green;
+    }
+    &_fifteen {
+        background-color: $black;
     }
 }
 .mb-48 {
