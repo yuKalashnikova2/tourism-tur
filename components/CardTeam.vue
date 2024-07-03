@@ -50,6 +50,9 @@ const backgroundStylesTeam = (img) => {
 
         background-repeat: no-repeat;
         margin-bottom: 16px;
+        @media (max-width: 768px) {
+            width: 100%;
+        }
     }
     & h5 {
         font-weight: 400;

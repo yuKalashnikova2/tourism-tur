@@ -13,7 +13,10 @@
             <li class="header__menu-item">О нас</li>
             <li class="header__menu-item">Контакты</li>
         </ul>
-        <Button label="Подключиться" />
+        <div class="d-none">
+            <Button label="Подключиться"  />
+        </div>
+       
     </header>
 </template>
 
@@ -26,12 +29,11 @@
     background-color: rgba(255, 255, 255, 0.6);
     justify-content: space-between;
     padding: 10px;
-    width: 100%;
+    // width: 100%;
     border-radius: 50px;
     &_container {
         top: 16px;
-   
-        // margin: 16px 99px 0 99px;
+        width: 100%;
     }
     & h2 {
         font-size: 20px;
@@ -52,6 +54,9 @@
     }
     &__menu {
         display: flex;
+        @media(max-width: 992px) {
+            display: none;
+        }
         &-item {
             font-size: 1rem;
             font-weight: 400;
@@ -62,6 +67,12 @@
                 cursor: pointer;
             }
         }
+    }
+}
+.d-none {
+    display: block;
+    @media(max-width: 992px) {
+        display: none;
     }
 }
 </style>

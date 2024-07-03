@@ -25,5 +25,8 @@ const props = defineProps({
         height: 100%;
         filter: grayscale(100%);
     }
+@media(max-width: 768px) {
+    max-width: 100%;
+}
 }
 </style>

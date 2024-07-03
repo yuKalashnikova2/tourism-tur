@@ -5,16 +5,18 @@
             <div class="text-overlay">
                 <div>
                     <h1 class="main__title">Турция Здоровье</h1>
-                    <p>
+                    <p class="main__description">
                         Отправьтесь в удивительное путешествие от оздоровления в
                         России до красоты в Турции с Эйюпом Ахметом Уйгуном!
                     </p>
-
-                    <Button
+                    <div class="m-10">
+                        <Button
                         label="Узнать больше"
                         backgroundColor
                         class="button_width"
                     />
+                    </div>
+                
                 </div>
             </div>
         </div>
@@ -110,6 +112,19 @@
     &__title {
         color: $yellow;
         font-size: 4rem;
+        line-height: 1;
+        @media(max-width: 768px) {
+            font-size: calc( 2.4rem + (5 - 2.4) * ((100vw - 20rem) / (48 - 20)));
+            line-height: calc( 1.1 * (2.4rem + (5 - 2.4) * ((100vw - 20rem) / (48 - 20))));
+        }
+    }
+    &__description {
+        font-size: 1.4rem;
+        line-height: 1.3;
+        @media(max-width: 768px) {
+            font-size: calc( 1.14rem + (1.4 - 1.14) * ((100vw - 20rem) / (48 - 20)));
+            line-height: calc( 1.4 * (1.14rem + (1.4 - 1.14) * ((100vw - 20rem) / (48 - 20))));
+        }
     }
 }
 
@@ -144,12 +159,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @media(max-width: 768px) {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        }
 
     & div {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 32px;
+        @media(max-width: 768px) {
+            gap: 4px;
+        }
         & p {
             font-size: 1.4rem;
             line-height: 1.3;
@@ -201,14 +223,19 @@
             word-break: break-word;
             word-wrap: break-word;
             font-weight: 400;
-            font-size: calc(
-                1.14rem + (1.4 - 1.14) * ((100vw - 62rem) / (87 - 62))
-            );
-            line-height: calc(
-                1.4 * (1.14rem + (1.4 - 1.14) * ((100vw - 62rem) / (87 - 62)))
-            );
-        }
+            font-size: 1.4rem;
+            line-height: 1.3;
+            @media (min-width: 992px) and (max-width: 1400px) {
+                font-size: calc( 1.14rem + (1.4 - 1.14) * ((100vw - 62rem) / (87 - 62)));
+                line-height: calc( 1.4 * (1.14rem + (1.4 - 1.14) * ((100vw - 62rem) / (87 - 62))));
     }
+            }
+            @media(max-width: 768px) {
+                font-size: calc( 1.14rem + (1.4 - 1.14) * ((100vw - 20rem) / (48 - 20)));
+                line-height: calc( 1.4 * (1.14rem + (1.4 - 1.14) * ((100vw - 20rem) / (48 - 20))));
+            }
+        }
+    
     &_twelve {
         background-color: $background-green;
     }
@@ -228,6 +255,10 @@
 .container-100 {
     margin-right: 100px;
     margin-left: 100px;
+    @media(max-width: 768px) {
+        margin-right: 8px;
+        margin-left: 8px;
+    }
 }
 .scrolling-text {
     font-size: calc(2.4rem + (5 - 2.4) * ((100vw - 62rem) / (87 - 62)));
@@ -239,5 +270,8 @@
 .width-800 {
     max-width: 800px;
     margin: 0 auto;
+}
+.m-10 {
+    margin: 10px;
 }
 </style>

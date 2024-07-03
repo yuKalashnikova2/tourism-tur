@@ -26,10 +26,12 @@ const props = defineProps({
         justify-content: center;
         color: $white;
         font-size: 1.4rem;
-        
         display: flex;
         align-items: center;
         justify-content: center;
+        @media(max-width: 768px) {
+          padding: 12px;
+        }
         &_transparent {
             background-color: transparent;
             border:2px solid $white;

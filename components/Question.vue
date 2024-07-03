@@ -66,10 +66,17 @@ const infoStyle = computed(() => {
     gap: 1rem;
 
     font-weight: 500;
-    font-size: calc(1.525rem + (2.5 - 1.525) * ((100vw - 62rem) / (87 - 62)));
-    line-height: calc(
-        1.4 * (1.525rem + (2.5 - 1.525) * ((100vw - 62rem) / (87 - 62)))
-    );
+    font-size: 2.5rem;
+    line-height: 1.5;
+    @media (min-width: 992px) and (max-width: 1400px) {
+        font-size: calc( 1.525rem + (2.5 - 1.525) * ((100vw - 62rem) / (87 - 62)));
+        line-height: calc( 1.4 * (1.525rem + (2.5 - 1.525) * ((100vw - 62rem) / (87 - 62))));
+    }
+    @media(max-width: 768px) {
+        font-size: calc( 1.525rem + (2.5 - 1.525) * ((100vw - 20rem) / (48 - 20)));
+        line-height: calc( 1.4 * (1.525rem + (2.5 - 1.525) * ((100vw - 20rem) / (48 - 20))));
+    }
+ 
 }
 
 .content {
@@ -80,11 +87,19 @@ const infoStyle = computed(() => {
     z-index: -1;
     opacity: 0;
     transition: opacity 0.2s ease-out;
-    font-size: calc(1.14rem + (1.4 - 1.14) * ((100vw - 62rem) / (87 - 62)));
-    line-height: calc(
-        1.4 * (1.14rem + (1.4 - 1.14) * ((100vw - 62rem) / (87 - 62)))
-    );
-}
+    font-size: 1.4rem;
+    line-height: 1.3;
+    @media (min-width: 992px) and (max-width: 1400px) {
+        font-size: calc( 1.14rem + (1.4 - 1.14) * ((100vw - 62rem) / (87 - 62)));
+        line-height: calc( 1.4 * (1.14rem + (1.4 - 1.14) * ((100vw - 62rem) / (87 - 62))));
+    }
+    @media(max-width: 768px) {
+        font-size: calc( 1.14rem + (1.4 - 1.14) * ((100vw - 20rem) / (48 - 20)));
+        line-height: calc( 1.4 * (1.14rem + (1.4 - 1.14) * ((100vw - 20rem) / (48 - 20))));
+    }
+    }
+
+
 .question__arrow {
     width: 27px;
     height: 20px;

@@ -44,6 +44,9 @@ const props = defineProps({
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @media (max-width: 768px) {
+        max-width: 100%;
+    }
     &-title {
         background-color: $green;
         color: $white;
@@ -53,8 +56,43 @@ const props = defineProps({
         & h5 {
             font-size: 2.5rem;
             line-height: 1.5;
+            @media (max-width: 768px) {
+                font-size: calc(
+                    1.525rem + (2.5 - 1.525) * ((100vw - 20rem) / (48 - 20))
+                );
+                line-height: calc(
+                    1.4 *
+                        (
+                            1.525rem + (2.5 - 1.525) *
+                                ((100vw - 20rem) / (48 - 20))
+                        )
+                );
+            }
+
             & strong {
                 font-weight: bold;
+            }
+        }
+        & span {
+            font-size: 1.4rem;
+            line-height: 1.3;
+            @media (min-width: 992px) and (max-width: 1400px) {
+                font-size: calc(
+                    1.14rem + (1.4 - 1.14) * ((100vw - 62rem) / (87 - 62))
+                );
+                line-height: calc(
+                    1.4 *
+                        (1.14rem + (1.4 - 1.14) * ((100vw - 62rem) / (87 - 62)))
+                );
+            }
+            @media (max-width: 768px) {
+                font-size: calc(
+                    1.14rem + (1.4 - 1.14) * ((100vw - 20rem) / (48 - 20))
+                );
+                line-height: calc(
+                    1.4 *
+                        (1.14rem + (1.4 - 1.14) * ((100vw - 20rem) / (48 - 20)))
+                );
             }
         }
     }

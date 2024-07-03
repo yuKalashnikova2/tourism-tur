@@ -41,15 +41,19 @@ const backgroundStyles = (img) => {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @media(max-width: 768px) {
+        max-width: 100%;
+    }
     &__img {
         border-radius: 30px;
         overflow: hidden;
         width: 267px;
         height: 400px;
-
         background-position: center;
-
         background-repeat: no-repeat;
+        @media(max-width: 768px) {
+        width: 100%;
+    }
     }
     &__subtitle {
         font-size: 2.5rem;

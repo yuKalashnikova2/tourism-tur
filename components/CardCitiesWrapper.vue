@@ -37,5 +37,13 @@ const cities = ref([
     gap: 32px;
     align-items: stretch;
     margin-top: 3rem !important;
+    @media(max-width: 992px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;    
+        }
+        @media(max-width: 768px) {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1rem;
+        }
 }
 </style>

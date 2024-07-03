@@ -14,5 +14,6 @@
     gap: 32px;
     margin-bottom: 32px;
     margin-top: 3rem !important;
+    flex-wrap: wrap;
 }
 </style>
