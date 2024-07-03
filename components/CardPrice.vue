@@ -44,7 +44,7 @@ const props = defineProps({
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    @media (max-width: 768px) {
+    @media (max-width: 992px) {
         max-width: 100%;
     }
     &-title {

@@ -1,8 +1,8 @@
 <script setup>
 const props = defineProps({
     quantity: {
-        type: Number,
-        default: 1,
+        type: String,
+        default: '1',
     },
     text: {
         type: String,
