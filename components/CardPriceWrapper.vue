@@ -1,5 +1,5 @@
 <template>
-    <div class="price">
+    <div class="price" id="price">
         <CardPrice packageName="Стандарт" :price="999" text="Операция + отдых + гарантированный результат. Все включено!" />
         <CardPrice packageName="Премиум" :price="1999" text="VIP обслуживание, персональный подход, роскошное проживание. Лучшее из лучшего!" />
         <CardPrice packageName="Эксклюзив" :price="2999" text="Индивидуальный маршрут, эксклюзивные процедуры, 24/7 поддержка. Для истинных ценителей!" />

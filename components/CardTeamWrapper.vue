@@ -1,5 +1,5 @@
 <template>
-    <div class="team">
+    <div class="team" id="team">
         <CardTeam imageName="photo-1.jpg" personName="Эйюп" 
         personInfo="Консультант по оздоровительному туризму" />
         <CardTeam imageName="photo-2.jpeg" personName="Айлин" 

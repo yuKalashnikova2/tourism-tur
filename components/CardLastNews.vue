@@ -30,8 +30,9 @@ const backgroundStyles = (img) => {
         <h5 class="last__news__subtitle">{{ subtitle }}</h5>
         <span class="last__news__text">{{ date }}</span>
         <span class="last__news__text">{{ text }}</span>
-
-        <Button label="Узнать" />
+        <NuxtLink to="#contacts">
+            <Button class="w-100" label="Узнать" />
+        </NuxtLink>
     </div>
 </template>
 

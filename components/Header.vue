@@ -30,20 +30,23 @@ const isVisible = ref(false)
 
         <ul class="header__menu">
             <li class="header__menu-item">
-                <NuxtLink to="#contacts">Услуги</NuxtLink>
+                <NuxtLink to="#price">Услуги</NuxtLink>
             </li>
             <li class="header__menu-item">
                 <NuxtLink to="#contacts">Фотографии</NuxtLink>
             </li>
             <li class="header__menu-item">
-                <NuxtLink to="#contacts">О нас</NuxtLink>
+                <NuxtLink to="#team">О нас</NuxtLink>
             </li>
             <li class="header__menu-item">
                 <NuxtLink to="#contacts">Контакты</NuxtLink>
             </li>
         </ul>
         <div class="d-none">
-            <Button label="Подключиться" />
+            <NuxtLink to="#contacts">
+                <Button label="Подключиться" />
+            </NuxtLink>
+           
         </div>
         <Transition>
             <nav class="burger__nav" v-if="isVisible">

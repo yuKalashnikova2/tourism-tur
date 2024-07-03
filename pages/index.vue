@@ -10,11 +10,14 @@
                         России до красоты в Турции с Эйюпом Ахметом Уйгуном!
                     </p>
                     <div class="m-10">
-                        <Button
+                        <NuxtLink to="#contacts">
+                            <Button
                         label="Узнать больше"
                         backgroundColor
                         class="button_width"
                     />
+                        </NuxtLink>
+                
                     </div>
                 
                 </div>
@@ -42,7 +45,9 @@
                 лучшим решением. Доверьте свое здоровье профессионалам и
                 наслаждайтесь результатом!</span
             >
-            <Button label="Узнать больше" />
+            <NuxtLink class="w-100" to="#contacts">
+                <Button class="w-100" label="Узнать больше" />
+            </NuxtLink>
         </div>
     </section>
     <section class="section_five container">
@@ -203,6 +208,9 @@
                 line-height: 1.3;
                 display: inline-block;
             }
+            & a {
+                width: 100%;
+            }
         }
     }
     &_eight {
@@ -274,4 +282,7 @@
 .m-10 {
     margin: 10px;
 }
+// .w-100 {
+//     width: 100%;
+// }
 </style>
