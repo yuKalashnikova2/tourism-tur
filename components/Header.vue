@@ -14,7 +14,6 @@ const isVisible = ref(false)
             </div>
             <h2>Оздоровительный туризм в Турцию</h2>
         </div>
-        <!-- проба -->
         <div class="burger__wrapper">
             <header class="burger__header">
                 <div
@@ -30,10 +29,18 @@ const isVisible = ref(false)
         </div>
 
         <ul class="header__menu">
-            <li class="header__menu-item">Услуги</li>
-            <li class="header__menu-item">Фотографии</li>
-            <li class="header__menu-item">О нас</li>
-            <li class="header__menu-item">Контакты</li>
+            <li class="header__menu-item">
+                <NuxtLink to="#contacts">Услуги</NuxtLink>
+            </li>
+            <li class="header__menu-item">
+                <NuxtLink to="#contacts">Фотографии</NuxtLink>
+            </li>
+            <li class="header__menu-item">
+                <NuxtLink to="#contacts">О нас</NuxtLink>
+            </li>
+            <li class="header__menu-item">
+                <NuxtLink to="#contacts">Контакты</NuxtLink>
+            </li>
         </ul>
         <div class="d-none">
             <Button label="Подключиться" />
@@ -42,7 +49,7 @@ const isVisible = ref(false)
             <nav class="burger__nav" v-if="isVisible">
                 <ul class="burger__list">
                     <li class="burger__item" v-for="lis in list">
-                        {{ lis }}
+                        <NuxtLink to="#contacts">{{ lis }}</NuxtLink>
                     </li>
                 </ul>
             </nav>
@@ -106,6 +113,9 @@ const isVisible = ref(false)
             line-height: 1.5;
             font-weight: 400;
             padding: 16px;
+            & a {
+                color: $text-black;
+            }
             &:hover {
                 background-color: #f8f9fa;
                 border-radius: 15px;
@@ -131,7 +141,6 @@ const isVisible = ref(false)
         }
     }
     &__header {
-        // background-color: #646cff;
         padding: 23px 34px;
         z-index: 10;
         overflow-y: hidden;
@@ -150,7 +159,7 @@ const isVisible = ref(false)
         height: auto;
         border-radius: 30px;
         z-index: 5;
-        @media (max-width: 992px) {
+        @media (min-width: 993px) {
             display: none;
         }
     }
@@ -166,6 +175,9 @@ const isVisible = ref(false)
         line-height: 1.5;
         font-weight: 400;
         padding: 16px;
+        & a {
+            color: $text-black;
+        }
         &:hover {
             background-color: #f8f9fa;
             border-radius: 15px;
