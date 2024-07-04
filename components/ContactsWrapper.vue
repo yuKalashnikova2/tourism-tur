@@ -2,8 +2,8 @@
     <div class="contacts__wrapper" id="contacts">
         <ContactCard title="Телефон" descry="+7 925 499 45 61" />
         <ContactCard title="Email" descry="eyupahmetuygun@mail.ru" />
-        <ContactCard title="Адрес" descry="Москва, Улица А, дом 3, Россия" />
-        <ContactCard title="Часы работы" descry="Пн-Пт: 9:00-18:00" />
+        <ContactCard title="WhatsApp" descry="+7 925 499 45 61" />
+        <ContactCard title="Часы работы" descry="Каждый день с 9:00 до 18:00" />
     </div>
 </template>
 

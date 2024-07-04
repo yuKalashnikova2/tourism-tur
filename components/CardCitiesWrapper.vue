@@ -3,23 +3,23 @@ import { ref } from 'vue'
 const cities = ref([
     {
         cityName: 'Стамбул',
-        image: 'city-1.jpeg',
+        image: 'city-1.jpg',
         info: 'История и современность в одном месте',
     },
     {
         cityName: 'Анталья',
-        image: 'city-2.jpeg',
+        image: 'city-2.jpg',
         info: 'Солнце, море и красота ждут вас',
     },
     {
         cityName: 'Измир',
-        image: 'city-3.jpeg',
-        info: 'Уютный город на берегу Эгейского моря',
+        image: 'city-3.jpg',
+        info: 'Культурная столица на берегу Эгейского моря',
     },
 ])
 </script>
 <template>
-    <div class="cities">
+    <div class="cities" >
         <CardCities
             v-for="city in cities"
             :key="city.cityName"

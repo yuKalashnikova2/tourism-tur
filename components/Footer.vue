@@ -2,16 +2,15 @@ import { SocialCard } from '#build/components';
 <template>
     <div class="footer">
         <ul class="footer__menu">
-            <li><NuxtLink to="#contacts">Главная</NuxtLink></li>
-            <li><NuxtLink to="#contacts">Услуги</NuxtLink></li>
+            <li><NuxtLink to="#main">Главная</NuxtLink></li>
+            <li><NuxtLink to="#price">Услуги</NuxtLink></li>
             <li><NuxtLink to="#contacts">Контакты</NuxtLink></li>
-            <li><NuxtLink to="#contacts">О нас</NuxtLink></li>
+            <li><NuxtLink to="#team">О нас</NuxtLink></li>
         </ul>
         <div class="footer__social">
-            <SocialCard iconImage="soc-b-1.svg" />
-            <SocialCard iconImage="soc-b-2.svg" />
-            <SocialCard iconImage="soc-b-3.svg" />
-            <SocialCard iconImage="soc-b-4.svg" />
+            <SocialCard iconImage="soc-b-1.svg" link="https://instagram.com/zdorovekrasotaiturizm" />
+            <SocialCard iconImage="soc-b-5.svg" link="https://vk.com/zdorovekrasotaiturizm" />
+            <SocialCard iconImage="soc-b-6.svg" link="https://t.me/zdorovekrasotaiturizm" />
         </div>
         <div class="footer__copyright">
             <span>© 2024 Оздоровительный Туризм</span>

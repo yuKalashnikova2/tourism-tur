@@ -42,7 +42,10 @@ const backgroundStyles = (img) => {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    @media(max-width: 992px) {
+    @media (min-width: 1500px) {
+        max-width: 100%;
+    }
+    @media(max-width: 1200px) {
         max-width: 100%;
     }
     &__img {
@@ -52,7 +55,10 @@ const backgroundStyles = (img) => {
         height: 400px;
         background-position: center;
         background-repeat: no-repeat;
-        @media(max-width: 992px) {
+        @media (min-width: 1500px) {
+        width: 100%;
+    }
+        @media(max-width: 1200px) {
         width: 100%;
     }
     }

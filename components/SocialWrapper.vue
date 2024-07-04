@@ -1,9 +1,17 @@
 <template>
     <div class="social__wrapper">
-        <SocialCard iconImage="soc-1.svg" />
-        <SocialCard iconImage="soc-2.svg" />
-        <SocialCard iconImage="soc-3.svg" />
-        <SocialCard iconImage="soc-4.svg" />
+        <SocialCard
+            iconImage="soc-1.svg"
+            link="https://instagram.com/zdorovekrasotaiturizm"
+        />
+        <SocialCard
+            iconImage="soc-5.svg"
+            link="https://vk.com/zdorovekrasotaiturizm"
+        />
+        <SocialCard
+            iconImage="soc-6.svg"
+            link="https://t.me/zdorovekrasotaiturizm"
+        />
     </div>
 </template>
 

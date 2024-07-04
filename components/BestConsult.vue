@@ -12,7 +12,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="consult">
+    <div class="consult" id="team">
         <div>
             <p class="consult__title">Лучший консультант в оздоровительном</p>
             <p class="consult__title">туризме!</p>
@@ -61,6 +61,10 @@ const props = defineProps({
         height: 120px;
         border-radius: 50%;
         overflow: hidden;
+        @media (min-width: 1500px) {
+            width: 180px;
+            height: 180px;
+        }
         & img {
             width: 100%;
             height: 100%;
@@ -71,6 +75,9 @@ const props = defineProps({
         font-size: 1.4rem;
         line-height: 1.3;
         font-weight: bold;
+        @media (min-width: 1500px) {
+            font-size: 2rem;
+        }
         @media (min-width: 992px) and (max-width: 1400px) {
             font-size: calc(
                 1.14rem + (1.4 - 1.14) * ((100vw - 62rem) / (87 - 62))

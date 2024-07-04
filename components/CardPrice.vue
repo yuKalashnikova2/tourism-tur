@@ -21,10 +21,10 @@ const props = defineProps({
             <h5>
                 <strong>{{ packageName }}</strong>
             </h5>
-            <span>
+            <!-- <span>
                 <strong>${{ price }}</strong
                 >/операция</span
-            >
+            > -->
         </div>
         <div class="card__price__text padding_36">
             <p>{{ text }}</p>
@@ -44,7 +44,10 @@ const props = defineProps({
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    @media (max-width: 992px) {
+    @media (min-width: 1500px) {
+        max-width: 100%;
+    }
+    @media (max-width: 1200px) {
         max-width: 100%;
     }
     &-title {
@@ -52,10 +55,15 @@ const props = defineProps({
         color: $white;
         display: flex;
         flex-direction: column;
-
+        @media (min-width: 1500px) {
+        height: 155px;
+    }
         & h5 {
-            font-size: 2.5rem;
+            font-size: 1.8rem;
             line-height: 1.5;
+            @media (min-width: 1500px) {
+                font-size: 2.5rem;
+            }
             @media (max-width: 768px) {
                 font-size: calc(
                     1.525rem + (2.5 - 1.525) * ((100vw - 20rem) / (48 - 20))
@@ -109,6 +117,6 @@ const props = defineProps({
     margin-top: auto;
 }
 .padding_36 {
-    padding: 36px;
+    padding: 24px;
 }
 </style>

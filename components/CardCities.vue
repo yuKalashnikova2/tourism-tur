@@ -6,7 +6,7 @@ const props = defineProps({
     },
     image: {
         type: String,
-        default: 'city-1.jpeg',
+        default: 'city-1.jpg',
     },
     info: {
         type: String,
@@ -42,6 +42,10 @@ const props = defineProps({
         width: 80px;
         height: 80px;
         margin-bottom: 1rem !important;
+        @media(min-width: 1500px) {
+            width: 150px;
+        height: 150px;
+        }
         & img {
             width: 100%;
             height: 100%;
@@ -57,7 +61,6 @@ const props = defineProps({
         & h5 {
             font-size: 2.5rem;
             line-height: 1.5;
-
             font-weight: bold;
             display: block;
             text-align: center;
@@ -69,6 +72,9 @@ const props = defineProps({
             word-break: break-word;
             word-wrap: break-word;
             font-weight: 400;
+            @media(min-width: 1500px) {
+                font-size: 1.7rem;
+        }
         }
     }
 }

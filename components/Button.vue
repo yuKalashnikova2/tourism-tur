@@ -29,6 +29,9 @@ const props = defineProps({
         display: flex;
         align-items: center;
         justify-content: center;
+        @media(min-width: 1500px) {
+          font-size: 2rem;
+        }
         @media(max-width: 768px) {
           padding: 12px;
         }

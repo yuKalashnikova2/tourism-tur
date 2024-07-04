@@ -50,6 +50,9 @@ const backgroundStylesTeam = (img) => {
 
         background-repeat: no-repeat;
         margin-bottom: 16px;
+        @media (min-width: 1500px) {
+        width: 100%;
+    }
         @media (max-width: 768px) {
             width: 100%;
         }

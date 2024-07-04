@@ -4,12 +4,19 @@ const props = defineProps({
         type: String,
         default: 'soc-1.svg',
     },
+    link: {
+        type: String,
+        default: '/',
+    },
 })
 </script>
 <template>
-    <div class="social">
+    <nuxt-link :to="link">
+        <div class="social">
         <img :src="'/social/' + iconImage" alt="icon" />
     </div>
+    </nuxt-link>
+ 
 </template>
 
 <style lang="scss" scoped>
@@ -23,6 +30,11 @@ const props = defineProps({
     background-color: $primary;
     border-radius: 50%;
     padding: 20px;
+    @media(min-width:1500px) {
+        width: 100px;
+        height: 100px;
+        padding: 25px;
+    }
     & img {
         width: 100%;
         height: 100%;

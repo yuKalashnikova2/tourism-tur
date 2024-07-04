@@ -1,5 +1,5 @@
 <template>
-    <div class="container_last">
+    <div class="container_last" id="lastnews">
         <CardLastNews
             imageName="1.jpeg"
             subtitle="Новая клиника в Стамбуле"
@@ -34,9 +34,9 @@
     gap: 32px;
     align-items: stretch;
     margin-top: 3rem !important;
-    @media(max-width: 992px) {
+    @media(max-width: 1200px) {
             grid-template-columns: repeat(2, 1fr);
-            gap: 0.5rem;    
+            gap: 1.5rem;    
         }
         @media(max-width: 768px) {
             grid-template-columns: repeat(1, 1fr);

@@ -1,25 +1,19 @@
 <template>
-    <div class="main">
+    <div class="main" id="main">
         <div class="image-container">
             <img src="/banner.jpeg" alt="Фоновая картинка" />
             <div class="text-overlay">
                 <div>
-                    <h1 class="main__title">Турция Здоровье</h1>
+                    <h1 class="main__title">Процедуры лечения в Турции</h1>
                     <p class="main__description">
                         Отправьтесь в удивительное путешествие от оздоровления в
                         России до красоты в Турции с Эйюпом Ахметом Уйгуном!
                     </p>
                     <div class="m-10">
                         <NuxtLink to="#contacts">
-                            <Button
-                        label="Узнать больше"
-                        backgroundColor
-                        class="button_width"
-                    />
+                            <Button label="Узнать больше" backgroundColor />
                         </NuxtLink>
-                
                     </div>
-                
                 </div>
             </div>
         </div>
@@ -30,7 +24,7 @@
         <CardPriceWrapper />
     </section>
     <section class="section_two container">
-        <Subtitle subtitle="Последние новости" />
+        <Subtitle subtitle="Фотографии" />
         <CardLastNewsWrapper />
     </section>
     <section class="section_three container">
@@ -45,15 +39,17 @@
                 лучшим решением. Доверьте свое здоровье профессионалам и
                 наслаждайтесь результатом!</span
             >
-            <NuxtLink class="w-100" to="#contacts">
-                <Button class="w-100" label="Узнать больше" />
-            </NuxtLink>
+            <div class="flex">
+                <NuxtLink class="w-100" to="#contacts">
+                    <Button class="w-100" label="Узнать больше" />
+                </NuxtLink>
+            </div>
         </div>
     </section>
-    <section class="section_five container">
+    <!-- <section class="section_five container">
         <Subtitle subtitle="Наша команда" />
         <CardTeamWrapper />
-    </section>
+    </section> -->
     <section>
         <marquee
             scrollamount="12"
@@ -66,14 +62,14 @@
         </marquee>
     </section>
 
-    <section class="section_seven container">
+    <!-- <section class="section_seven container">
         <Subtitle subtitle="Наши партнеры" />
         <CardPartnersWrapper />
-    </section>
+    </section> -->
 
-    <section class="section_eight">
+    <!-- <section class="section_eight">
         <div class="section_eight__banner"></div>
-    </section>
+    </section> -->
     <section class="section_nine container">
         <BestConsult name="Эйюп Ахмет Уйгун" avatar="photo-1.jpg" />
     </section>
@@ -86,9 +82,9 @@
         </div>
         <CardCitiesWrapper />
     </section>
-    <section class="section_eleven container container-100">
+    <!-- <section class="section_eleven container container-100">
         <AdvantagesWrapper />
-    </section>
+    </section> -->
     <section class="section_twelve container">
         <Subtitle subtitle="Ответы на вопросы" />
         <div class="container-100">
@@ -118,17 +114,29 @@
         color: $yellow;
         font-size: 4rem;
         line-height: 1;
-        @media(max-width: 768px) {
-            font-size: calc( 2.4rem + (5 - 2.4) * ((100vw - 20rem) / (48 - 20)));
-            line-height: calc( 1.1 * (2.4rem + (5 - 2.4) * ((100vw - 20rem) / (48 - 20))));
+        @media (min-width: 1401px) {
+            font-size: 7rem;
+        }
+        @media (max-width: 768px) {
+            font-size: calc(2.4rem + (5 - 2.4) * ((100vw - 20rem) / (48 - 20)));
+            line-height: calc(
+                1.1 * (2.4rem + (5 - 2.4) * ((100vw - 20rem) / (48 - 20)))
+            );
         }
     }
     &__description {
         font-size: 1.4rem;
         line-height: 1.3;
-        @media(max-width: 768px) {
-            font-size: calc( 1.14rem + (1.4 - 1.14) * ((100vw - 20rem) / (48 - 20)));
-            line-height: calc( 1.4 * (1.14rem + (1.4 - 1.14) * ((100vw - 20rem) / (48 - 20))));
+        @media (min-width: 1401px) {
+            font-size: 3rem;
+        }
+        @media (max-width: 768px) {
+            font-size: calc(
+                1.14rem + (1.4 - 1.14) * ((100vw - 20rem) / (48 - 20))
+            );
+            line-height: calc(
+                1.4 * (1.14rem + (1.4 - 1.14) * ((100vw - 20rem) / (48 - 20)))
+            );
         }
     }
 }
@@ -164,22 +172,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
         padding-top: 2rem;
         padding-bottom: 2rem;
-        }
+    }
 
     & div {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 32px;
-        @media(max-width: 768px) {
+        @media (max-width: 768px) {
             gap: 4px;
-        }
-        & p {
-            font-size: 1.4rem;
-            line-height: 1.3;
         }
     }
 }
@@ -203,6 +207,9 @@
             gap: 40px;
             margin-left: 16px;
             margin-right: 16px;
+            @media (min-width: 1500px) {
+                padding: 88px;
+            }
             & span {
                 font-size: 1.4rem;
                 line-height: 1.3;
@@ -210,6 +217,10 @@
             }
             & a {
                 width: 100%;
+                display: block;
+                @media (min-width: 1500px) {
+                    width: 140%;
+                }
             }
         }
     }
@@ -233,17 +244,29 @@
             font-weight: 400;
             font-size: 1.4rem;
             line-height: 1.3;
-            @media (min-width: 992px) and (max-width: 1400px) {
-                font-size: calc( 1.14rem + (1.4 - 1.14) * ((100vw - 62rem) / (87 - 62)));
-                line-height: calc( 1.4 * (1.14rem + (1.4 - 1.14) * ((100vw - 62rem) / (87 - 62))));
-    }
+            @media (min-width: 1500px) {
+                font-size: 1.7rem;
             }
-            @media(max-width: 768px) {
-                font-size: calc( 1.14rem + (1.4 - 1.14) * ((100vw - 20rem) / (48 - 20)));
-                line-height: calc( 1.4 * (1.14rem + (1.4 - 1.14) * ((100vw - 20rem) / (48 - 20))));
+            @media (min-width: 992px) and (max-width: 1400px) {
+                font-size: calc(
+                    1.14rem + (1.4 - 1.14) * ((100vw - 62rem) / (87 - 62))
+                );
+                line-height: calc(
+                    1.4 *
+                        (1.14rem + (1.4 - 1.14) * ((100vw - 62rem) / (87 - 62)))
+                );
             }
         }
-    
+        @media (max-width: 768px) {
+            font-size: calc(
+                1.14rem + (1.4 - 1.14) * ((100vw - 20rem) / (48 - 20))
+            );
+            line-height: calc(
+                1.4 * (1.14rem + (1.4 - 1.14) * ((100vw - 20rem) / (48 - 20)))
+            );
+        }
+    }
+
     &_twelve {
         background-color: $background-green;
     }
@@ -263,7 +286,7 @@
 .container-100 {
     margin-right: 100px;
     margin-left: 100px;
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
         margin-right: 8px;
         margin-left: 8px;
     }
@@ -278,11 +301,18 @@
 .width-800 {
     max-width: 800px;
     margin: 0 auto;
+    @media (min-width: 1500px) {
+        max-width: 100%;
+    }
+}
+
+.w-150 {
+    width: 150px;
 }
 .m-10 {
     margin: 10px;
 }
-// .w-100 {
-//     width: 100%;
-// }
+.flex {
+    margin: 0 auto;
+}
 </style>

@@ -1,63 +1,69 @@
 <script setup>
 import { ref } from 'vue'
 
-const list = ref(['Услуги', 'Фотографии', 'О нас', 'Контакты'])
+const list = ref([
+    { name: 'Услуги', link: '#price' },
+    { name: 'Фотографии', link: '#lastnews' },
+    { name: 'О нас', link: '#team' },
+    { name: 'Контакты', link: '#contacts' },
+])
 
 const isVisible = ref(false)
 </script>
 
 <template>
-    <header class="header header_container">
-        <div class="header__logo">
-            <div class="header__image">
-                <img src="/logo.jpeg" alt="logo" />
-            </div>
-            <h2>Оздоровительный туризм в Турцию</h2>
-        </div>
-        <div class="burger__wrapper">
-            <header class="burger__header">
-                <div
-                    class="burger__button"
-                    :class="{ open: isVisible }"
-                    @click="isVisible = !isVisible"
-                >
-                    <span></span>
-                    <span></span>
-                    <span></span>
+    <div class="m-auto">
+        <header class="header header_container">
+            <div class="header__logo">
+                <div class="header__image">
+                    <img src="/logo.jpeg" alt="logo" />
                 </div>
-            </header>
-        </div>
+                <h2>Оздоровительный туризм в Турцию</h2>
+            </div>
+            <div class="burger__wrapper">
+                <header class="burger__header">
+                    <div
+                        class="burger__button"
+                        :class="{ open: isVisible }"
+                        @click="isVisible = !isVisible"
+                    >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </header>
+            </div>
 
-        <ul class="header__menu">
-            <li class="header__menu-item">
-                <NuxtLink to="#price">Услуги</NuxtLink>
-            </li>
-            <li class="header__menu-item">
-                <NuxtLink to="#contacts">Фотографии</NuxtLink>
-            </li>
-            <li class="header__menu-item">
-                <NuxtLink to="#team">О нас</NuxtLink>
-            </li>
-            <li class="header__menu-item">
-                <NuxtLink to="#contacts">Контакты</NuxtLink>
-            </li>
-        </ul>
-        <div class="d-none">
-            <NuxtLink to="#contacts">
-                <Button label="Подключиться" />
-            </NuxtLink>
-           
-        </div>
-        <Transition>
-            <nav class="burger__nav" v-if="isVisible">
-                <ul class="burger__list">
-                    <li class="burger__item" v-for="lis in list">
-                        <NuxtLink to="#contacts">{{ lis }}</NuxtLink>
-                    </li>
-                </ul>
-            </nav>
-        </Transition>
-    </header>
+            <ul class="header__menu">
+                <li class="header__menu-item">
+                    <NuxtLink to="#price">Услуги</NuxtLink>
+                </li>
+                <li class="header__menu-item">
+                    <NuxtLink to="#lastnews">Фотографии</NuxtLink>
+                </li>
+                <li class="header__menu-item">
+                    <NuxtLink to="#team">О нас</NuxtLink>
+                </li>
+                <li class="header__menu-item">
+                    <NuxtLink to="#contacts">Контакты</NuxtLink>
+                </li>
+            </ul>
+            <div class="d-none">
+                <NuxtLink to="#contacts">
+                    <Button label="Подключиться" class="fs-1" />
+                </NuxtLink>
+            </div>
+            <Transition>
+                <nav class="burger__nav" v-if="isVisible">
+                    <ul class="burger__list">
+                        <li class="burger__item" v-for="lis in list">
+                            <NuxtLink :to="lis.link">{{ lis.name }}</NuxtLink>
+                        </li>
+                    </ul>
+                </nav>
+            </Transition>
+        </header>
+    </div>
 </template>
 
 <style lang="scss">
@@ -74,9 +80,15 @@ const isVisible = ref(false)
     &_container {
         top: 16px;
         width: 100%;
+        @media (min-width: 1500px) {
+            max-width: 1500px;
+        }
     }
     & h2 {
         font-size: 1.2rem;
+        @media (min-width: 1500px) {
+            font-size: 1.6rem;
+        }
         @media (min-width: 992px) and (max-width: 1400px) {
             font-size: calc(
                 1.07rem + (1.2 - 1.07) * ((100vw - 62rem) / (87 - 62))
@@ -116,6 +128,9 @@ const isVisible = ref(false)
             line-height: 1.5;
             font-weight: 400;
             padding: 16px;
+            @media (min-width: 1500px) {
+                font-size: 1.4rem;
+            }
             & a {
                 color: $text-black;
             }
@@ -233,6 +248,13 @@ const isVisible = ref(false)
         }
     }
 }
+.m-auto {
+    margin: auto;
+    @media (min-width: 1500px) {
+        display: flex;
+        justify-content: center;
+    }
+}
 .v-enter-active,
 .v-leave-active {
     transition: opacity 0.5s ease;
@@ -241,5 +263,9 @@ const isVisible = ref(false)
 .v-enter-from,
 .v-leave-to {
     opacity: 0;
+}
+
+.fs-1 {
+    font-size: 1.5rem !important;
 }
 </style>
