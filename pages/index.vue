@@ -58,8 +58,7 @@
             scrolldelay="1"
             class="scrolling-text"
             >Бесплатная консультация * Бронирование и проживание * Отпуск и
-            анализы * Операция и процедуры * Сопровождение и гарантия * Фото до
-            и после *
+            анализы * Операция и процедуры * Сопровождение и гарантия *
         </marquee>
     </section>
 
@@ -87,7 +86,7 @@
         <AdvantagesWrapper />
     </section> -->
     <section class="section_twelve container">
-        <Subtitle subtitle="Ответы на вопросы" />
+        <Subtitle subtitle="Этапы организации" />
         <div class="container-100">
             <QuestionsWrapper />
         </div>
@@ -153,6 +152,9 @@
     width: 100%;
     height: auto;
     object-fit: cover;
+    @media(max-width:768px) {
+        height: 500px;
+    }
 }
 .container {
     padding-top: 5rem;

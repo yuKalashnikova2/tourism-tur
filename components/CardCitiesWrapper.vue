@@ -1,6 +1,11 @@
 <script setup>
 import { ref } from 'vue'
 const cities = ref([
+{
+        cityName: 'Измир',
+        image: 'city-3.jpg',
+        info: 'Культурная столица на берегу Эгейского моря',
+    },
     {
         cityName: 'Стамбул',
         image: 'city-1.jpg',
@@ -10,11 +15,6 @@ const cities = ref([
         cityName: 'Анталья',
         image: 'city-2.jpg',
         info: 'Солнце, море и красота ждут вас',
-    },
-    {
-        cityName: 'Измир',
-        image: 'city-3.jpg',
-        info: 'Культурная столица на берегу Эгейского моря',
     },
 ])
 </script>
