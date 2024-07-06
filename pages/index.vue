@@ -1,5 +1,4 @@
 
-import Marquee from '~/components/Marquee.vue';
 <template>
     <div class="main" id="main">
         <div class="image-container">
@@ -30,7 +29,7 @@ import Marquee from '~/components/Marquee.vue';
         <CardLastNewsWrapper />
     </section>
     <section class="section_three container">
-        <Subtitle subtitle="Медицинский туризм: Россия - Турция" />
+        <Subtitle subtitle="Оздоровительный туризм: Россия - Турция" />
         <VideoComponent class="container-100" />
     </section>
     <section class="section_four container">
