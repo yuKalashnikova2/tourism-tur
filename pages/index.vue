@@ -1,3 +1,5 @@
+
+import Marquee from '~/components/Marquee.vue';
 <template>
     <div class="main" id="main">
         <div class="image-container">

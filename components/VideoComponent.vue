@@ -1,13 +1,16 @@
 <template>
     <div class="video">
-        <iframe
-            width="1000"
+        <video
+            width="500"
             height="615"
-            src="https://www.youtube.com/embed/NN1l3MyhcXY?autoplay=1"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-        ></iframe>
+            controls
+            autoplay
+            muted
+            playsinline
+        >
+        <source src="/short.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
     </div>
 </template>
 
@@ -16,16 +19,9 @@
     margin-top: 3rem !important;
     border-radius: 12px;
     overflow: hidden;
-    position: relative;
-    padding-bottom: 20%;
-    height: 615px;
-    & iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-
-        border-radius: 12px;
-    }
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 </style>
